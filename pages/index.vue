@@ -102,6 +102,11 @@
             Our proven process ensures your project is delivered on time, on budget, and exceeds expectations.
           </p>
         </div>
+        <Steps
+          title="How we work"
+          subtitle="Our proven process ensures your project is delivered on time, on budget, and exceeds expectations."
+          :steps="processSteps"
+        />
       </div>
     </section>
 
