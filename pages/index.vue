@@ -33,6 +33,7 @@
       title="Why choose Tifawin?"
       subtitle="We combine technical expertise with creative vision to deliver solutions that drive real business results."
       :features="valueProps"
+      gridClass="grid-cards-4"
     />
 
     <!-- Featured Services -->
@@ -91,19 +92,11 @@
     </section>
 
     <!-- Process -->
-    <section class="section">
-      <div class="container-custom">
-        <div class="text-center mb-16">
-          <div class="eyebrow mb-4">Our Process</div>
-          <h2 class="heading-section mb-4">
-            How we work
-          </h2>
-          <p class="text-xl text-muted-600 dark:text-muted-400 max-w-3xl mx-auto leading-7">
-            Our proven process ensures your project is delivered on time, on budget, and exceeds expectations.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Steps
+      title="How we work"
+      subtitle="Our proven process ensures your project is delivered on time, on budget, and exceeds expectations."
+      :steps="processSteps"
+    />
 
     <!-- Case Study Highlights -->
     <section class="section">

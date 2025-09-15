@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid-cards">
+      <div :class="gridClass || 'grid-cards'">
         <div
           v-for="(feature, index) in features"
           :key="feature.title"
@@ -59,6 +59,7 @@ interface Props {
   title: string
   subtitle: string
   features: Feature[]
+  gridClass?: string
 }
 
 defineProps<Props>()
