@@ -102,6 +102,30 @@
             Our proven process ensures your project is delivered on time, on budget, and exceeds expectations.
           </p>
         </div>
+
+        <div class="grid-cards-4">
+          <div
+            v-for="(step, index) in processSteps"
+            :key="step.title"
+            class="card-hover text-center group"
+          >
+            <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span class="text-2xl font-bold text-white">{{ index + 1 }}</span>
+            </div>
+            
+            <h3 class="heading-card mb-4 text-ink-900 dark:text-ink-50">
+              {{ step.title }}
+            </h3>
+            
+            <p class="body-text leading-7 mb-4">
+              {{ step.description }}
+            </p>
+            
+            <div class="text-sm text-primary-500 font-semibold">
+              {{ step.duration }}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

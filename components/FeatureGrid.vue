@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid-cards">
+      <div class="grid-cards-4">
         <div
           v-for="(feature, index) in features"
           :key="feature.title"
