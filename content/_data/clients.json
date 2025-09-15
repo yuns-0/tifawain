@@ -1,0 +1,38 @@
+[
+  {
+    "name": "TechCorp",
+    "logo": "/logos/techcorp.svg",
+    "industry": "Technology",
+    "description": "Leading provider of enterprise software solutions"
+  },
+  {
+    "name": "StartupXYZ",
+    "logo": "/logos/startupxyz.svg",
+    "industry": "SaaS",
+    "description": "Innovative startup building the future of work"
+  },
+  {
+    "name": "InnovateLab",
+    "logo": "/logos/innovatelab.svg",
+    "industry": "Research",
+    "description": "Cutting-edge research and development company"
+  },
+  {
+    "name": "FutureCo",
+    "logo": "/logos/futureco.svg",
+    "industry": "Fintech",
+    "description": "Financial technology solutions for modern businesses"
+  },
+  {
+    "name": "NextGen",
+    "logo": "/logos/nextgen.svg",
+    "industry": "Healthcare",
+    "description": "Revolutionizing healthcare through technology"
+  },
+  {
+    "name": "ScaleUp",
+    "logo": "/logos/scaleup.svg",
+    "industry": "E-commerce",
+    "description": "Growing e-commerce platform with global reach"
+  }
+]

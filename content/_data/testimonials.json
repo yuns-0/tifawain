@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sarah Johnson",
+    "role": "CEO",
+    "company": "TechCorp",
+    "content": "Tifawin transformed our operations. The automation they built saves us 20 hours per week, and the new design increased our conversion rate by 35%.",
+    "rating": 5,
+    "avatar": "/avatars/sarah-johnson.jpg"
+  },
+  {
+    "name": "Michael Chen",
+    "role": "Founder",
+    "company": "StartupXYZ",
+    "content": "Working with Tifawin was a game-changer. They delivered our MVP in just 2 weeks, and the quality exceeded our expectations.",
+    "rating": 5,
+    "avatar": "/avatars/michael-chen.jpg"
+  },
+  {
+    "name": "Emily Rodriguez",
+    "role": "Marketing Director",
+    "company": "InnovateLab",
+    "content": "The automation workflows they created have streamlined our entire marketing process. We can now focus on strategy instead of manual tasks.",
+    "rating": 5,
+    "avatar": "/avatars/emily-rodriguez.jpg"
+  },
+  {
+    "name": "David Kim",
+    "role": "CTO",
+    "company": "FutureCo",
+    "content": "Their technical expertise is unmatched. The APIs they built integrate seamlessly with our existing systems and scale beautifully.",
+    "rating": 5,
+    "avatar": "/avatars/david-kim.jpg"
+  },
+  {
+    "name": "Lisa Wang",
+    "role": "Product Manager",
+    "company": "NextGen",
+    "content": "The design system they created has made our entire team more productive. Everything is consistent, beautiful, and user-friendly.",
+    "rating": 5,
+    "avatar": "/avatars/lisa-wang.jpg"
+  },
+  {
+    "name": "James Wilson",
+    "role": "Operations Director",
+    "company": "ScaleUp",
+    "content": "The automation solutions they implemented have reduced our operational costs by 40% while improving accuracy and speed.",
+    "rating": 5,
+    "avatar": "/avatars/james-wilson.jpg"
+  }
+]

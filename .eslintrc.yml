@@ -1,0 +1,42 @@
+# Nuxt 3 TypeScript ESLint Configuration
+
+extends:
+  - '@nuxtjs/eslint-config-typescript'
+
+rules:
+  # Vue specific rules
+  vue/multi-word-component-names: 'off'
+  vue/no-v-html: 'off'
+  
+  # TypeScript rules
+  '@typescript-eslint/no-unused-vars': 'warn'
+  '@typescript-eslint/no-explicit-any': 'warn'
+  
+  # General rules
+  'no-console': 'warn'
+  'prefer-const': 'error'
+  'no-var': 'error'
+  
+  # Import rules
+  'import/order': ['error', {
+    'groups': [
+      'builtin',
+      'external',
+      'internal',
+      'parent',
+      'sibling',
+      'index'
+    ],
+    'newlines-between': 'always',
+    'alphabetize': {
+      'order': 'asc',
+      'caseInsensitive': true
+    }
+  }]
+
+ignorePatterns:
+  - 'node_modules/'
+  - '.nuxt/'
+  - '.output/'
+  - 'dist/'
+  - 'coverage/'

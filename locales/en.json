@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "tools": "Tools"
+  },
+  "hero": {
+    "badge": "Automate. Design. Grow.",
+    "title": "Ship faster, automate smarter, design better",
+    "subtitle": "We help businesses streamline operations with custom automation, beautiful design, and scalable development. From idea to live in weeks, not months.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "View Portfolio"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "From automation to design, we provide comprehensive solutions to help your business thrive.",
+    "codeDev": {
+      "name": "Code Development",
+      "description": "Custom web applications, APIs, and integrations built with modern technologies.",
+      "duration": "2-4 weeks"
+    },
+    "automation": {
+      "name": "Automation",
+      "description": "Workflow automation with n8n, Zapier, and custom solutions to eliminate manual tasks.",
+      "duration": "1-2 weeks"
+    },
+    "design": {
+      "name": "Design",
+      "description": "UI/UX design, prototypes, and design systems that convert visitors into customers.",
+      "duration": "1-3 weeks"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to automate, design, and grow? We'd love to hear about your project and discuss how we can help you achieve your goals.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "phone": "Phone Number",
+      "budget": "Budget Range",
+      "timeline": "Timeline",
+      "interest": "Services of Interest",
+      "message": "Project Details",
+      "consent": "I agree to the Privacy Policy and consent to being contacted about my project.",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you within 24 hours."
+    }
+  },
+  "footer": {
+    "description": "Automate. Design. Grow. We help businesses streamline operations with custom automation, beautiful design, and scalable development.",
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get the latest insights on automation, design, and growth.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "location": "Casablanca, Morocco",
+    "serving": "Serving clients worldwide"
+  }
+}

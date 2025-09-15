@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What services do you offer?",
+    "answer": "We offer comprehensive services including code development (web apps, APIs, integrations), branding (strategy, visual identity, guidelines), design (UI/UX, prototypes, design systems), automation (n8n, Zapier, custom workflows), social media management, and AI agents (conversational bots, data pipelines)."
+  },
+  {
+    "question": "How long does a typical project take?",
+    "answer": "Project timelines vary based on scope and complexity. Simple automation projects can be completed in 1-2 weeks, while comprehensive web applications typically take 2-4 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the process."
+  },
+  {
+    "question": "What's your pricing structure?",
+    "answer": "We offer flexible pricing options including fixed-price projects, hourly rates, and retainer agreements. Our pricing depends on project scope, timeline, and complexity. We provide transparent quotes with no hidden fees and offer free consultations to discuss your specific needs."
+  },
+  {
+    "question": "Do you work with startups?",
+    "answer": "Absolutely! We love working with startups and understand the unique challenges they face. We offer special packages for early-stage companies and can work within tight budgets and timelines. Many of our clients are startups that have grown into successful businesses."
+  },
+  {
+    "question": "What technologies do you use?",
+    "answer": "We work with modern, proven technologies including Python, JavaScript/TypeScript, Node.js, Nuxt/Next.js, WordPress, WooCommerce, React, Vue.js, and various automation platforms like n8n, Zapier, and Make. We choose the best technology stack for each project's specific requirements."
+  },
+  {
+    "question": "Do you provide ongoing support?",
+    "answer": "Yes, we offer ongoing support and maintenance packages for all our projects. This includes bug fixes, updates, performance monitoring, and feature enhancements. We believe in building long-term partnerships with our clients."
+  },
+  {
+    "question": "Can you help with existing projects?",
+    "answer": "Definitely! We often work with clients who have existing projects that need improvements, updates, or integrations. We can audit your current setup, identify areas for improvement, and implement solutions that work seamlessly with your existing systems."
+  },
+  {
+    "question": "What makes you different from other agencies?",
+    "answer": "We combine technical expertise with creative vision, focusing on measurable business results. Our streamlined process gets projects delivered quickly without compromising quality. We're also committed to transparency, providing regular updates and ensuring you own your code and data."
+  },
+  {
+    "question": "Do you offer custom automation solutions?",
+    "answer": "Yes! While we work with popular platforms like n8n, Zapier, and Make, we also build custom automation solutions when needed. This includes custom APIs, webhooks, and specialized workflows tailored to your specific business processes."
+  },
+  {
+    "question": "How do you ensure project quality?",
+    "answer": "We follow a rigorous quality assurance process including code reviews, testing, and regular client feedback sessions. All our code is well-documented, follows best practices, and is thoroughly tested before deployment. We also provide comprehensive documentation and training."
+  }
+]

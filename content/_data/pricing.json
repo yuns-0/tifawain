@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Starter",
+    "description": "Perfect for small projects and getting started",
+    "price": 5000,
+    "period": "project",
+    "features": [
+      "Up to 2 weeks development time",
+      "Basic automation setup",
+      "Simple web application",
+      "Email support",
+      "1 revision round",
+      "Basic documentation"
+    ],
+    "cta": {
+      "text": "Get Started",
+      "href": "/contact?plan=starter"
+    },
+    "note": "Best for MVPs and simple projects"
+  },
+  {
+    "name": "Growth",
+    "description": "Ideal for growing businesses with more complex needs",
+    "price": 15000,
+    "period": "project",
+    "features": [
+      "Up to 4 weeks development time",
+      "Advanced automation workflows",
+      "Custom web application with API",
+      "Priority support",
+      "3 revision rounds",
+      "Comprehensive documentation",
+      "Training session included",
+      "30 days post-launch support"
+    ],
+    "cta": {
+      "text": "Choose Growth",
+      "href": "/contact?plan=growth"
+    },
+    "featured": true,
+    "note": "Most popular choice"
+  },
+  {
+    "name": "Scale",
+    "description": "For established businesses ready to scale",
+    "price": 35000,
+    "period": "project",
+    "features": [
+      "Up to 8 weeks development time",
+      "Enterprise-grade automation",
+      "Full-stack application with integrations",
+      "Dedicated project manager",
+      "Unlimited revision rounds",
+      "Complete documentation & training",
+      "90 days post-launch support",
+      "Performance monitoring setup",
+      "Security audit included"
+    ],
+    "cta": {
+      "text": "Scale Up",
+      "href": "/contact?plan=scale"
+    },
+    "note": "For complex, enterprise projects"
+  },
+  {
+    "name": "Enterprise",
+    "description": "Custom solutions for large organizations",
+    "price": 0,
+    "period": "custom",
+    "features": [
+      "Custom timeline and scope",
+      "Multi-platform integrations",
+      "Advanced security features",
+      "Dedicated team",
+      "24/7 support",
+      "Custom training programs",
+      "Ongoing maintenance",
+      "Performance optimization",
+      "Compliance assistance"
+    ],
+    "cta": {
+      "text": "Contact Sales",
+      "href": "/contact?plan=enterprise"
+    },
+    "note": "Contact us for custom pricing"
+  }
+]
