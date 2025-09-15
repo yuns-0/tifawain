@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid-cards">
+      <div :class="pricingTiers.length === 4 ? 'grid-cards-4' : 'grid-cards'">
         <div
           v-for="(pricing, index) in pricingTiers"
           :key="pricing.name"
@@ -39,12 +39,12 @@
             <p class="body-text mb-4">
               {{ pricing.description }}
             </p>
-            <div class="flex items-baseline justify-center">
-              <span class="text-4xl font-bold text-ink-900 dark:text-ink-50">
-                {{ formatCurrency(pricing.price) }}
+            <div class="flex items-center justify-center gap-2">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-ink-100 dark:bg-ink-800 text-ink-700 dark:text-ink-300">
+                {{ pricing.modelTag }}
               </span>
-              <span v-if="pricing.period" class="text-muted-600 dark:text-muted-400 ml-2">
-                /{{ pricing.period }}
+              <span v-if="pricing.badge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">
+                {{ pricing.badge }}
               </span>
             </div>
           </div>
@@ -72,7 +72,7 @@
             class="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-200"
             :class="pricing.featured ? 'btn-primary' : 'btn-outline'"
           >
-            {{ pricing.cta.text }}
+            {{ pricing.ctaLabel || 'Contact us' }}
           </NuxtLink>
 
           <!-- Additional Info -->
@@ -106,20 +106,18 @@
 </template>
 
 <script setup lang="ts">
-import { formatCurrency } from '~/utils/format'
-
 interface PricingCTA {
-  text: string
   href: string
 }
 
 interface PricingTier {
   name: string
   description: string
-  price: number
-  period?: string
+  modelTag: 'Retainer' | 'Bulk' | 'Staff' | 'Single' | 'Hybrid' | string
+  badge?: string
   features: string[]
   cta: PricingCTA
+  ctaLabel?: string
   featured?: boolean
   note?: string
 }
