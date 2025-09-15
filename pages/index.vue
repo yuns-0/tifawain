@@ -36,11 +36,15 @@
     />
 
     <!-- Featured Services -->
-    <section class="section bg-ink-50 dark:bg-ink-900">
-      <div class="container-custom">
+    <section class="section bg-gradient-to-br from-ink-50 via-primary-50/30 to-secondary-50/30 dark:from-ink-900 dark:via-primary-900/20 dark:to-secondary-900/20 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10 rounded-organic blur-3xl animate-morph"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-neon-pink/10 to-neon-green/10 rounded-blob blur-3xl animate-float"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="text-center mb-16">
-          <div class="eyebrow mb-4">Our Services</div>
-          <h2 class="heading-section mb-4">
+          <div class="eyebrow mb-4 gradient-text-neon">Our Services</div>
+          <h2 class="heading-section mb-4 gradient-text-ocean">
             What We Do
           </h2>
           <p class="text-xl text-muted-600 dark:text-muted-400 max-w-3xl mx-auto leading-7">
@@ -50,35 +54,46 @@
 
         <div class="grid-cards">
           <div
-            v-for="service in featuredServices"
+            v-for="(service, index) in featuredServices"
             :key="service.name"
-            class="card-hover group"
+            class="card-floating group relative overflow-hidden"
+            :style="{ animationDelay: `${index * 0.1}s` }"
           >
-            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Icon :name="service.icon" class="w-8 h-8 text-white" />
-            </div>
+            <!-- Background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
-            <h3 class="heading-card mb-4 text-ink-900 dark:text-ink-50">
-              {{ service.name }}
-            </h3>
-            
-            <p class="body-text mb-6">
-              {{ service.description }}
-            </p>
-
-            <div class="flex items-center justify-between">
-              <NuxtLink
-                :to="service.href"
-                class="text-primary-500 hover:text-primary-600 font-semibold flex items-center group-hover:translate-x-1 transition-transform duration-200"
-              >
-                Learn more
-                <Icon name="heroicons:arrow-right" class="w-4 h-4 ml-1" />
-              </NuxtLink>
+            <!-- Icon with modern shape -->
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-organic flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-neon-cyan/20">
+                <Icon :name="service.icon" class="w-10 h-10 text-white" />
+              </div>
               
-              <div class="text-sm text-muted-500">
-                {{ service.duration }}
+              <h3 class="heading-card mb-4 text-ink-900 dark:text-ink-50 group-hover:text-neon-cyan transition-colors duration-300">
+                {{ service.name }}
+              </h3>
+              
+              <p class="body-text mb-6">
+                {{ service.description }}
+              </p>
+
+              <div class="flex items-center justify-between">
+                <NuxtLink
+                  :to="service.href"
+                  class="text-neon-cyan hover:text-neon-purple font-semibold flex items-center group-hover:translate-x-1 transition-all duration-200"
+                >
+                  Learn more
+                  <Icon name="heroicons:arrow-right" class="w-4 h-4 ml-1" />
+                </NuxtLink>
+                
+                <div class="text-sm text-muted-500 font-medium">
+                  {{ service.duration }}
+                </div>
               </div>
             </div>
+            
+            <!-- Floating elements -->
+            <div class="absolute top-4 right-4 w-2 h-2 bg-neon-cyan rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
+            <div class="absolute bottom-4 left-4 w-1 h-1 bg-neon-purple rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" style="animation-delay: 0.5s;"></div>
           </div>
         </div>
 
@@ -91,11 +106,16 @@
     </section>
 
     <!-- Process -->
-    <section class="section">
-      <div class="container-custom">
+    <section class="section relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-secondary-50/30 via-primary-50/20 to-accent-50/30 dark:from-secondary-900/20 dark:via-primary-900/10 dark:to-accent-900/20"></div>
+      <div class="absolute top-1/4 right-20 w-48 h-48 bg-gradient-to-br from-neon-green/10 to-neon-orange/10 rounded-blob blur-3xl animate-blob"></div>
+      <div class="absolute bottom-1/4 left-20 w-32 h-32 bg-gradient-to-br from-neon-purple/10 to-neon-cyan/10 rounded-organic blur-3xl animate-morph"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="text-center mb-16">
-          <div class="eyebrow mb-4">Our Process</div>
-          <h2 class="heading-section mb-4">
+          <div class="eyebrow mb-4 gradient-text-sunset">Our Process</div>
+          <h2 class="heading-section mb-4 gradient-text-ocean">
             How we work
           </h2>
           <p class="text-xl text-muted-600 dark:text-muted-400 max-w-3xl mx-auto leading-7">
@@ -107,34 +127,50 @@
           <div
             v-for="(step, index) in processSteps"
             :key="step.title"
-            class="card-hover text-center group"
+            class="card-neumorphism text-center group relative overflow-hidden"
+            :style="{ animationDelay: `${index * 0.15}s` }"
           >
-            <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span class="text-2xl font-bold text-white">{{ index + 1 }}</span>
+            <!-- Background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-neon-pink/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <div class="relative z-10">
+              <!-- Step number with modern shape -->
+              <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-organic flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-neon-cyan/20">
+                <span class="text-2xl font-bold text-white">{{ index + 1 }}</span>
+              </div>
+              
+              <h3 class="heading-card mb-4 text-ink-900 dark:text-ink-50 group-hover:text-neon-cyan transition-colors duration-300">
+                {{ step.title }}
+              </h3>
+              
+              <p class="body-text leading-7 mb-4">
+                {{ step.description }}
+              </p>
+              
+              <div class="text-sm gradient-text-neon font-semibold">
+                {{ step.duration }}
+              </div>
             </div>
             
-            <h3 class="heading-card mb-4 text-ink-900 dark:text-ink-50">
-              {{ step.title }}
-            </h3>
-            
-            <p class="body-text leading-7 mb-4">
-              {{ step.description }}
-            </p>
-            
-            <div class="text-sm text-primary-500 font-semibold">
-              {{ step.duration }}
-            </div>
+            <!-- Floating elements -->
+            <div class="absolute top-4 right-4 w-2 h-2 bg-neon-cyan rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
+            <div class="absolute bottom-4 left-4 w-1 h-1 bg-neon-purple rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" style="animation-delay: 0.5s;"></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Case Study Highlights -->
-    <section class="section">
-      <div class="container-custom">
+    <section class="section relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-ink-50/50 to-primary-50/30 dark:from-ink-900/50 dark:to-primary-900/20"></div>
+      <div class="absolute top-20 right-20 w-40 h-40 bg-gradient-to-br from-neon-orange/10 to-neon-pink/10 rounded-blob blur-3xl animate-blob"></div>
+      <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-neon-green/10 to-neon-cyan/10 rounded-organic blur-3xl animate-morph"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="text-center mb-16">
-          <div class="eyebrow mb-4">Success Stories</div>
-          <h2 class="heading-section mb-4">
+          <div class="eyebrow mb-4 gradient-text-rainbow">Success Stories</div>
+          <h2 class="heading-section mb-4 gradient-text-ocean">
             Featured Case Studies
           </h2>
           <p class="text-xl text-muted-600 dark:text-muted-400 max-w-3xl mx-auto leading-7">
@@ -144,26 +180,33 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 lg:gap-8">
           <div
-            v-for="caseStudy in featuredCaseStudies"
+            v-for="(caseStudy, index) in featuredCaseStudies"
             :key="caseStudy.title"
-            class="card-hover overflow-hidden"
+            class="card-glass overflow-hidden group relative"
+            :style="{ animationDelay: `${index * 0.2}s` }"
           >
-            <div class="aspect-video bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-              <Icon name="heroicons:photo" class="w-16 h-16 text-white/50" />
+            <!-- Modern image container -->
+            <div class="aspect-video bg-gradient-to-br from-neon-cyan via-neon-purple to-neon-pink flex items-center justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/20 to-neon-pink/20 animate-gradient-shift"></div>
+              <Icon name="heroicons:photo" class="w-16 h-16 text-white/70 group-hover:scale-110 transition-transform duration-300" />
+              
+              <!-- Floating elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-white/30 rounded-full animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-white/20 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
             </div>
             
-            <div class="p-8">
+            <div class="p-8 relative z-10">
               <div class="flex items-center space-x-2 mb-4">
                 <span
                   v-for="tag in caseStudy.tags"
                   :key="tag"
-                  class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full"
+                  class="px-3 py-1 bg-gradient-to-r from-neon-cyan/20 to-neon-purple/20 text-neon-cyan text-sm rounded-full border border-neon-cyan/30"
                 >
                   {{ tag }}
                 </span>
               </div>
               
-              <h3 class="heading-card mb-3 text-ink-900 dark:text-ink-50 line-clamp-2">
+              <h3 class="heading-card mb-3 text-ink-900 dark:text-ink-50 line-clamp-2 group-hover:text-neon-cyan transition-colors duration-300">
                 {{ caseStudy.title }}
               </h3>
               
@@ -172,18 +215,22 @@
               </p>
 
               <div class="flex items-center justify-between">
-                <div class="text-sm text-muted-500">
+                <div class="text-sm text-muted-500 font-medium">
                   {{ caseStudy.client }}
                 </div>
                 <NuxtLink
                   :to="caseStudy.href"
-                  class="text-primary-500 hover:text-primary-600 font-semibold flex items-center"
+                  class="text-neon-cyan hover:text-neon-purple font-semibold flex items-center group-hover:translate-x-1 transition-all duration-200"
                 >
                   Read case study
                   <Icon name="heroicons:arrow-right" class="w-4 h-4 ml-1" />
                 </NuxtLink>
               </div>
             </div>
+            
+            <!-- Floating elements -->
+            <div class="absolute top-4 right-4 w-2 h-2 bg-neon-cyan rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
+            <div class="absolute bottom-4 left-4 w-1 h-1 bg-neon-purple rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" style="animation-delay: 0.5s;"></div>
           </div>
         </div>
 
@@ -212,10 +259,14 @@
     />
 
     <!-- Blog Preview -->
-    <section class="section bg-ink-50 dark:bg-ink-900">
-      <div class="container-custom">
+    <section class="section bg-gradient-to-br from-ink-50 via-secondary-50/30 to-accent-50/30 dark:from-ink-900 dark:via-secondary-900/20 dark:to-accent-900/20 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-neon-green/10 to-neon-orange/10 rounded-blob blur-3xl animate-blob"></div>
+      <div class="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-br from-neon-purple/10 to-neon-cyan/10 rounded-organic blur-3xl animate-morph"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 gradient-text-sunset">
             Latest Insights
           </h2>
           <p class="text-xl text-muted-600 dark:text-muted-400 max-w-3xl mx-auto">
@@ -225,26 +276,33 @@
 
         <div class="grid-cards">
           <article
-            v-for="post in featuredBlogPosts"
+            v-for="(post, index) in featuredBlogPosts"
             :key="post.title"
-            class="card-hover overflow-hidden"
+            class="card-neon overflow-hidden group relative"
+            :style="{ animationDelay: `${index * 0.1}s` }"
           >
-            <div class="aspect-video bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-              <Icon name="heroicons:document-text" class="w-16 h-16 text-white/50" />
+            <!-- Modern image container -->
+            <div class="aspect-video bg-gradient-to-br from-neon-cyan via-neon-purple to-neon-pink flex items-center justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-neon-cyan/30 to-neon-pink/30 animate-gradient-shift"></div>
+              <Icon name="heroicons:document-text" class="w-16 h-16 text-white/70 group-hover:scale-110 transition-transform duration-300" />
+              
+              <!-- Floating elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-white/30 rounded-full animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-white/20 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
             </div>
             
-            <div class="p-6">
+            <div class="p-6 relative z-10">
               <div class="flex items-center space-x-2 mb-3">
                 <span
                   v-for="tag in post.tags"
                   :key="tag"
-                  class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-xs rounded-full"
+                  class="px-2 py-1 bg-gradient-to-r from-neon-cyan/20 to-neon-purple/20 text-neon-cyan text-xs rounded-full border border-neon-cyan/30"
                 >
                   {{ tag }}
                 </span>
               </div>
               
-              <h3 class="heading-card mb-3 text-ink-900 dark:text-ink-50 line-clamp-2">
+              <h3 class="heading-card mb-3 text-ink-900 dark:text-ink-50 line-clamp-2 group-hover:text-neon-cyan transition-colors duration-300">
                 {{ post.title }}
               </h3>
               
@@ -253,18 +311,22 @@
               </p>
 
               <div class="flex items-center justify-between">
-                <div class="text-xs text-muted-500">
+                <div class="text-xs text-muted-500 font-medium">
                   {{ formatDate(post.date) }}
                 </div>
                 <NuxtLink
                   :to="post.href"
-                  class="text-primary-500 hover:text-primary-600 font-semibold text-sm flex items-center"
+                  class="text-neon-cyan hover:text-neon-purple font-semibold text-sm flex items-center group-hover:translate-x-1 transition-all duration-200"
                 >
                   Read more
                   <Icon name="heroicons:arrow-right" class="w-3 h-3 ml-1" />
                 </NuxtLink>
               </div>
             </div>
+            
+            <!-- Floating elements -->
+            <div class="absolute top-4 right-4 w-2 h-2 bg-neon-cyan rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
+            <div class="absolute bottom-4 left-4 w-1 h-1 bg-neon-purple rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" style="animation-delay: 0.5s;"></div>
           </article>
         </div>
 
@@ -277,18 +339,23 @@
     </section>
 
     <!-- Contact Mini Form -->
-    <section class="section">
-      <div class="container-custom">
+    <section class="section relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-secondary-50/30 to-accent-50/50 dark:from-primary-900/20 dark:via-secondary-900/10 dark:to-accent-900/20"></div>
+      <div class="absolute top-20 right-20 w-48 h-48 bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10 rounded-blob blur-3xl animate-blob"></div>
+      <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-neon-pink/10 to-neon-green/10 rounded-organic blur-3xl animate-morph"></div>
+      
+      <div class="container-custom relative z-10">
         <div class="max-w-2xl mx-auto text-center">
-          <div class="eyebrow mb-4">Get Started</div>
-          <h2 class="heading-section mb-4">
+          <div class="eyebrow mb-4 gradient-text-rainbow">Get Started</div>
+          <h2 class="heading-section mb-4 gradient-text-ocean">
             Let's start your project
           </h2>
           <p class="text-xl text-muted-600 dark:text-muted-400 mb-8 leading-7">
             Ready to automate, design, and grow? Get in touch for a free consultation.
           </p>
           
-          <div class="card">
+          <div class="card-glass">
             <ContactForm />
           </div>
         </div>
